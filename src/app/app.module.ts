@@ -17,7 +17,17 @@ import { CharactersListComponent } from './components/characters-list/characters
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: 'movies',
+        component: MoviesListComponent
+      },
+      {
+        path: 'characters',
+        component: CharactersListComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
