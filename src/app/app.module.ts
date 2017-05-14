@@ -8,6 +8,9 @@ import { CharactersListComponent } from './components/characters-list/characters
 import { CharacterComponent } from './components/character/character.component';
 import { MoviesModule } from './modules/movies/movies.module';
 import { PageNotFoundComponent } from './components/page-not-found.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import 'hammerjs';
+import { CustomMaterialModule} from './custom-material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,10 +20,12 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    CustomMaterialModule,
     FormsModule,
     HttpModule,
+    MoviesModule,
     AppRoutingModule,
-    MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
